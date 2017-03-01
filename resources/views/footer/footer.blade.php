@@ -2,7 +2,7 @@
     <div class="container-footer col-xs-12">
         <div class="inner-footer col-sm-6 col-md-3">
             <ul>
-                <li class="li_header"><img src="image/redHat.png">IНФОРМАЦIЯ</li>
+                <li class="li_header"><img src={{asset("image/redHat.png")}}>IНФОРМАЦIЯ</li>
                 <hr>
                 <li><a href="#">Про нас</a></li>
                 <li><a href="#">Партнери</a></li>
@@ -13,7 +13,7 @@
         </div>
         <div class="inner-footer col-sm-6 col-md-3">
             <ul>
-                <li class="li_header"><img src="image/redHat.png">НАВЧАННЯ</li>
+                <li class="li_header"><img src={{asset("image/redHat.png")}}>НАВЧАННЯ</li>
                 <hr>
                 <li><a href="#">Навчальні заклади</a></li>
                 <li><a href="#">Тренінги і семінари</a></li>
@@ -23,7 +23,7 @@
         </div>
         <div class="inner-footer col-sm-6 col-md-3">
             <ul>
-                <li class="li_header"><img src="image/redHat.png">ПОСЛУГИ</li>
+                <li class="li_header"><img src={{asset("image/redHat.png")}}>ПОСЛУГИ</li>
                 <hr>
                 <li><a href="#">Довідник</a></li>
                 <li><a href="#">Навчання</a></li>
@@ -32,7 +32,7 @@
         </div>
         <div class="inner-footer col-sm-6 col-md-3">
             <ul>
-                <li class="li_header"><img src="image/redHat.png">КОНТАКТИ</li>
+                <li class="li_header"><img src={{asset("image/redHat.png")}}>КОНТАКТИ</li>
                 <hr>
                 <li>
                     <i class="fa fa-phone-square" aria-hidden="true"></i>
@@ -53,7 +53,7 @@
     <div class="down-footer col-xs-12">
         <div class="inner-footer col-md-6">
             © 2012 | Проект реалізовано за підтримки міжнародного фонду "Відродження"
-            <img src="image/vidrodjenja.png">
+            <img src={{asset("image/vidrodjenja.png")}}>
         </div>
         <div class="inner-footer col-md-6" style="text-align: center;">
             Поділитись у соцмережах:
