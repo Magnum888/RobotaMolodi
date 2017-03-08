@@ -1,7 +1,7 @@
 <footer class="row footer">
     <div class="container-footer col-xs-12">
         <div class="inner-footer col-sm-6 col-md-3">
-            <ul>
+            <ul class="footer-menu">
                 <li class="li_header"><img src={{asset("image/redHat.png")}}>IНФОРМАЦIЯ</li>
                 <hr>
                 <li><a href="#">Про нас</a></li>
@@ -12,7 +12,7 @@
 
         </div>
         <div class="inner-footer col-sm-6 col-md-3">
-            <ul>
+            <ul class="footer-menu" >
                 <li class="li_header"><img src={{asset("image/redHat.png")}}>НАВЧАННЯ</li>
                 <hr>
                 <li><a href="#">Навчальні заклади</a></li>
@@ -22,7 +22,7 @@
             </ul>
         </div>
         <div class="inner-footer col-sm-6 col-md-3">
-            <ul>
+            <ul class="footer-menu">
                 <li class="li_header"><img src={{asset("image/redHat.png")}}>ПОСЛУГИ</li>
                 <hr>
                 <li><a href="#">Довідник</a></li>
@@ -30,8 +30,8 @@
                 <li><a href="#">Бізнес-ідеї</a></li>
             </ul>
         </div>
-        <div class="inner-footer col-sm-6 col-md-3">
-            <ul>
+        <div class="footer-contacts inner-footer col-sm-6 col-md-3">
+            <ul class="footer-menu">
                 <li class="li_header"><img src={{asset("image/redHat.png")}}>КОНТАКТИ</li>
                 <hr>
                 <li>
@@ -55,14 +55,16 @@
             © 2012 | Проект реалізовано за підтримки міжнародного фонду "Відродження"
             <img src={{asset("image/vidrodjenja.png")}}>
         </div>
-        <div class="inner-footer col-md-6" style="text-align: center;">
+            <div class="inner-footer col-md-6" style="text-align: right">
             Поділитись у соцмережах:
+            </div>
+                <div class="inner-footer col-md-6" style="text-align: right">
             <a href="https://www.vk.com/"><i class="fa-soc fa fa-vk fa-2x" aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/"><i class="fa-soc fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
             <a href="https://www.facebook.com/"><i class="fa-soc fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
             <a href="https://www.twitter.com/"><i class="fa-soc fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
             <a href="https://www.google.com/"><i class="fa-soc fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
-        </div>
+            </div>
     </div>
 </footer>
 </div>

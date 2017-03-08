@@ -6404,8 +6404,16 @@ label,
   padding: 20px;
 }
 
+.footer-menu {
+  padding-left: 0px;
+}
+.container-footer > .footer-contacts {
+  padding-left: 0px;
+  padding-right: 7px;
+}
 
-.li_header{
+
+.footer .li_header{
   margin: 30px 0px 20px 0px;
   padding: 0px;
   font-family: ACLine;
