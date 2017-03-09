@@ -75,70 +75,67 @@
                     <ul class="list-inline">
                         <li class="li_link send_url_link">
                             <i class="fa fa-link"></i>
-                            <button type="button" class="btn btn-link" onclick="showDiv('send_URL_vacancy')" onclick="@if(!Auth::check())
-                                    window.location='{{ url('auth/login') }}'@endif">відправити URL</button>
+                            <button type="button" class="btn btn-link" onclick="showDiv('URL')">відправити URL</button>
 
                         </li>
                         <li class="li_link send_file_link">
                             <i class="fa fa-file-o"></i>
-                            <button type="button" class="btn btn-link" onclick="showDiv('send_file_vacancy')" onclick="@if(!Auth::check())
-                                    window.location='{{ url('auth/login') }}'@endif">відправити файл</button>
+                            <button type="button" class="btn btn-link" onclick="showDiv('FILE')">відправити файл</button>
 
                         </li>
                         <li class="li_link send_resume_link">
                             <i class="fa fa-file-text-o"></i>
-                            <button type="button" class="btn btn-link" onclick="showDiv('send_resume_vacancy')" onclick="@if(!Auth::check())
-                                    window.location='{{ url('auth/login') }}'@endif">відправити резюме</button>
+                            <button type="button" class="btn btn-link" onclick="showDiv('RESUME')">відправити резюме</button>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Form URL -->
-                <div id="send_URL_vacancy" class="send_block">
-                    <form class="URL_vacancy">
-                        <span class="bold_vacancy">Вставити посилання на резюме:</span>
-                        <input class="form-control" type="text" placeholder="URL">
-                    </form>
+                {{--<!-- Form URL -->--}}
+                {{--<div id="send_URL_vacancy" class="send_block">--}}
+                    {{--<form class="URL_vacancy">--}}
+                        {{--<span class="bold_vacancy">Вставити посилання на резюме:</span>--}}
+                        {{--<input class="form-control" type="text" placeholder="URL">--}}
+                    {{--</form>--}}
 
-                    <form class="send">
-                        <button type="button" class="sent_file_button">Відправити</button>
-                    </form>
-                </div>
-                <!-- End of Form URL -->
+                    {{--<form class="send">--}}
+                        {{--<button type="button" class="sent_file_button">Відправити</button>--}}
+                    {{--</form>--}}
+                {{--</div>--}}
+                {{--<!-- End of Form URL -->--}}
 
-                <!-- Form File -->
-                <div id="send_file_vacancy" class="send_block">
-                    <form class="send_form" method="post">
-                        <span class="bold_vacancy" style="font-size: 18px; color: #797979">Завантажити файл:</span>
-                        <div style=" margin-top:5px; height: 44px;">
-                            <div class="file_upload">
-                                <button type="button" class="sent_file_button" id="choose_file">Вибрати файл</button>
-                                <input type="file" class="insert_file" id="uploaded-file" onchange="getFileName ();">
-                            </div>
-                            <p class="text_vac dont_choose" id="file-name">Файл не выбран</p>
-                        </div>
+                {{--<!-- Form File -->--}}
+                {{--<div id="send_file_vacancy" class="send_block">--}}
+                    {{--<form class="send_form" method="post">--}}
+                        {{--<span class="bold_vacancy" style="font-size: 18px; color: #797979">Завантажити файл:</span>--}}
+                        {{--<div style=" margin-top:5px; height: 44px;">--}}
+                            {{--<div class="file_upload">--}}
+                                {{--<button type="button" class="sent_file_button" id="choose_file">Вибрати файл</button>--}}
+                                {{--<input type="file" class="insert_file" id="uploaded-file" onchange="getFileName ();">--}}
+                            {{--</div>--}}
+                            {{--<p class="text_vac dont_choose" id="file-name">Файл не выбран</p>--}}
+                        {{--</div>--}}
 
-                        <button type="button" class="sent_file_button">Відправити</button>
-                    </form>
-                </div>
-                <!-- End of Form File -->
+                        {{--<button type="button" class="sent_file_button">Відправити</button>--}}
+                    {{--</form>--}}
+                {{--</div>--}}
+                {{--<!-- End of Form File -->--}}
 
-                <!-- Form Resume -->
-                <div id="send_resume_vacancy" class="send_block">
-                    <form class="URL_vacancy">
-                        <span class="bold_vacancy">Вставити посилання на резюме:</span>
-                        <select class="form-control">
-                            <option>resume 1</option>
-                            <option>resume 2</option>
-                            <option>resume 3</option>
-                        </select>
-                    </form>
+                {{--<!-- Form Resume -->--}}
+                {{--<div id="send_resume_vacancy" class="send_block">--}}
+                    {{--<form class="URL_vacancy">--}}
+                        {{--<span class="bold_vacancy">Вставити посилання на резюме:</span>--}}
+                        {{--<select class="form-control">--}}
+                            {{--<option>resume 1</option>--}}
+                            {{--<option>resume 2</option>--}}
+                            {{--<option>resume 3</option>--}}
+                        {{--</select>--}}
+                    {{--</form>--}}
 
-                    <form class="send">
-                        <button type="button" class="sent_file_button">Відправити</button>
-                    </form>
-                </div>
-                <!-- end of Form Resume -->
+                    {{--<form class="send">--}}
+                        {{--<button type="button" class="sent_file_button">Відправити</button>--}}
+                    {{--</form>--}}
+                {{--</div>--}}
+                {{--<!-- end of Form Resume -->--}}
 
             </div>
         </div>
