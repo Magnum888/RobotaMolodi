@@ -170,7 +170,7 @@ button.btn.btn-link {
     border: 0;
     outline: none;
 }
-.right_colomn.btn {
+.right-colomn-vacancy.btn {
     font-size: 20px;
     color: darkorange;
     font-family: "SegoeUI";
@@ -179,7 +179,7 @@ button.btn.btn-link {
     color: darkorange;
 }
 
-.right_colomn input{
+.right-colomn-vacancy input{
     /*background-color: #F68C06;*/
     /*color: white;*/
     font-size: 16px;
@@ -217,23 +217,23 @@ li span{
         display:block;
     }
 
-    .right_colomn{
+    .right-colomn-vacancy{
         margin-left:0;
     }
 }
 
 /*block of link*/
 
-.right_vac #send_URL_vacancy{
+.right-vac #send-URL-vacancy{
     display: none;
 }
 
 
-#send_file_vacancy{
+#send-file-vacancy{
     display: none;
 }
 
-#send_resume_vacancy{
+#send-resume-vacancy{
     display: none;
 }
 
@@ -241,7 +241,7 @@ form.URL_vacancy {
     width: 100%;
 }
 
-.right_colomn input.form-control {
+.right-colomn-vacancy input.form-control {
     margin: 0;
     margin-top: 5px;
     border: 1px solid darkorange;

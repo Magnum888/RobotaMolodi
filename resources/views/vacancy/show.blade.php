@@ -69,29 +69,36 @@
             </div>
             </div>
         </div>
-        <div class="right_colomn">
-            <div class="right_vac">
-                <div class="list_but">
+        <div class="right-colomn-vacancy">
+            <div class="right-vac">
+                <div class="list-but-vac">
                     <ul class="list-inline">
-                        <li class="li_link send_url_link">
+                        <li class="li-link send-url-link" data-type="url">
                             <i class="fa fa-link"></i>
-                            <button type="button" class="btn btn-link" onclick="showDiv('URL')">відправити URL</button>
-
+                            <button type="button" class="btn btn-link" onclick="showDiv('send-URL-vacancy')">відправити URL</button>
                         </li>
-                        <li class="li_link send_file_link">
+                        <li class="li-link send-file-link" data-type="file">
                             <i class="fa fa-file-o"></i>
-                            <button type="button" class="btn btn-link" onclick="showDiv('FILE')">відправити файл</button>
-
+                            <button type="button" class="btn btn-link" onclick="showDiv('send-file-vacancy')">відправити файл</button>
                         </li>
-                        <li class="li_link send_resume_link">
+                        <li class="li-link send-resume-link" data-type="resume">
                             <i class="fa fa-file-text-o"></i>
-                            <button type="button" class="btn btn-link" onclick="showDiv('RESUME')">відправити резюме</button>
+                            <button type="button" class="btn btn-link" onclick="showDiv('send-resume-vacancy')">відправити резюме</button>
                         </li>
                     </ul>
                 </div>
 
+                {{csrf_field()}}
+                <div id="send-URL-vacancy">
+                    {{Form::model(
+
+                    )
+                    }}
+                    {{Form::submit('Відправити', ['class' => 'btn btn-danger'])}}
+                    {{Form::close()}}
+                </div>
                 {{--<!-- Form URL -->--}}
-                {{--<div id="send_URL_vacancy" class="send_block">--}}
+                {{--<div id="send-URL-vacancy" class="send_block">--}}
                     {{--<form class="URL_vacancy">--}}
                         {{--<span class="bold_vacancy">Вставити посилання на резюме:</span>--}}
                         {{--<input class="form-control" type="text" placeholder="URL">--}}
@@ -104,7 +111,7 @@
                 {{--<!-- End of Form URL -->--}}
 
                 {{--<!-- Form File -->--}}
-                {{--<div id="send_file_vacancy" class="send_block">--}}
+                {{--<div id="send-file-vacancy" class="send_block">--}}
                     {{--<form class="send_form" method="post">--}}
                         {{--<span class="bold_vacancy" style="font-size: 18px; color: #797979">Завантажити файл:</span>--}}
                         {{--<div style=" margin-top:5px; height: 44px;">--}}
@@ -121,7 +128,7 @@
                 {{--<!-- End of Form File -->--}}
 
                 {{--<!-- Form Resume -->--}}
-                {{--<div id="send_resume_vacancy" class="send_block">--}}
+                {{--<div id="send-resume-vacancy" class="send_block">--}}
                     {{--<form class="URL_vacancy">--}}
                         {{--<span class="bold_vacancy">Вставити посилання на резюме:</span>--}}
                         {{--<select class="form-control">--}}
@@ -145,9 +152,9 @@
                 var closeAll = false;
                 if(document.getElementById(id).style.display == "block")
                     closeAll = true;
-                document.getElementById('send_URL_vacancy').style.display = "none";
-                document.getElementById('send_file_vacancy').style.display = "none";
-                document.getElementById('send_resume_vacancy').style.display = "none";
+                document.getElementById('send-URL-vacancy').style.display = "none";
+                document.getElementById('send-file-vacancy').style.display = "none";
+                document.getElementById('send-resume-vacancy').style.display = "none";
                 if(!closeAll)
                     document.getElementById(id).style.display = "block";
             }
