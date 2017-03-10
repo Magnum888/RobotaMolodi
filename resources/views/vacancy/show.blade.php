@@ -88,15 +88,51 @@
                     </ul>
                 </div>
 
-                {{csrf_field()}}
                 <div id="send-URL-vacancy">
-                    {{Form::model(
-
-                    )
-                    }}
-                    {{Form::submit('Відправити', ['class' => 'btn btn-danger'])}}
-                    {{Form::close()}}
+                    {!!Form::model(array('route' => 'vacancy.show', 'method' => 'post'))!!}
+                    {!!Form::label('url', 'Вставити посилання на URL:',['class' => 'url-text-vac'] )!!}
+                    {!!Form::text('email',null,['class' => 'form-control url-input-vac'])!!}
+                    <div align="right">
+                        {!!Form::submit('Відправити', ['class' => 'btn btn-warning btn-send'])!!}
+                    </div>
+                    {!!Form::close()!!}
                 </div>
+
+                <div id="send-file-vacancy">
+                    {!!Form::model(array(['route' => 'vacancy.show','enctype' => 'multipart/form-data', 'files' => true]))!!}
+                    {!! Form::file('file',array('class' => 'open-file-vac', 'id'=>'File', 'name' => 'FileName')) !!}
+                    <div align="right">
+                        {!!Form::submit('Відправити', ['class' => 'btn btn-warning btn-send'])!!}
+                    </div>
+                    {!!Form::close()!!}
+                </div>
+
+                <div id="send-resume-vacancy">
+                    {!!Form::model(['route' => 'vacancy.show'])!!}
+                    {{--<div class="form-group {{$errors-> has('Load') ? 'has-error' : ''}}" >--}}
+                        {{--@if (!empty($resume->all()))--}}
+                            {{--<select class="form-control" id="resume" name="resumeId" style="margin-top: 10px">--}}
+                                {{--@foreach($resume as $res)--}}
+                                    {{--<option value="{{$res->id}}" selected>{{$res->position}}</option>--}}
+                                {{--@endforeach--}}
+                            {{--</select>--}}
+                    {{--</div>--}}
+                    {{--{!! Form::hidden('id', $vacancy->id, array('class' => 'form-control')) !!}--}}
+
+                    {{--@else--}}
+                        {{--<p>У вас немає резюме.Перейти до створення резюме</p>--}}
+                        {{--<p>{!!link_to_route('resume.create','Створення резюме')!!}</p>--}}
+                    {{--@endif--}}
+                    {{--<div class="modal-footer">--}}
+                        {{--@if (!empty($resume->all()))--}}
+                            {{--<input type="submit" class="btn btn-default" name="btn" onclick="PasteLink()" style="background: #f48952" value="Відправити резюме">--}}
+                        {{--@endif--}}
+                        {{--<button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>--}}
+                    {{--</div>--}}
+                    {!!Form::close()!!}
+                </div>
+
+
                 {{--<!-- Form URL -->--}}
                 {{--<div id="send-URL-vacancy" class="send_block">--}}
                     {{--<form class="URL_vacancy">--}}
@@ -166,9 +202,9 @@
             }
         </script>
 
-        @include('/vacancy/pasteVacancyForm/link')
-        @include('/vacancy/pasteVacancyForm/file')
-        @include('/vacancy/pasteVacancyForm/resume')
+        {{--@include('/vacancy/pasteVacancyForm/link')--}}
+        {{--@include('/vacancy/pasteVacancyForm/file')--}}
+        {{--@include('/vacancy/pasteVacancyForm/resume')--}}
         <script>
 
         </script>

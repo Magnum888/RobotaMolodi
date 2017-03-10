@@ -182,13 +182,12 @@ button.btn.btn-link {
 .right-colomn-vacancy input{
     /*background-color: #F68C06;*/
     /*color: white;*/
-    font-size: 16px;
-    border-radius: 12px;
-    border:0;
+    /*font-size: 16px;*/
+    /*border-radius: 12px;*/
     height: 36px;
     padding: 5px;
-    margin: 5px;
-    text-transform: uppercase;
+    margin-bottom: 9px;
+    /*text-transform: uppercase;*/
 }
 
 ul{
@@ -240,12 +239,34 @@ li span{
 form.URL_vacancy {
     width: 100%;
 }
+.url-text-vac{
+    width: 100%;
+}
+.url-input-vac{
+    width: 100%;
+    background-color: white;
+    border: 1px solid #f26522;
+}
+input.btn.btn-warning.btn-send{
+    background-color: #f68c06;
+    align: right;
+}
+input.btn.btn-warning.btn-send:hover{
+    background-color:#f26522;
+}
+.open-file-vac{
+    color: white;
+    border-radius: 3px;
+}
 
 .right-colomn-vacancy input.form-control {
-    margin: 0;
-    margin-top: 5px;
-    border: 1px solid darkorange;
+    /*margin: 0;*/
+    /*margin-top: 5px;*/
+    border: 2px solid #f26522;
     border-radius: 3px;
+}
+.right-colomn-vacancy input.form-control:hover{
+    border: 2px solid #66afe9;
 }
 
 .URL_vacancy span{
