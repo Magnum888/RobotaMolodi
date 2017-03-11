@@ -109,7 +109,7 @@
 
                 <div id="send-resume-vacancy">
                     {!!Form::model(['route' => 'vacancy.show'])!!}
-                    {{--<div class="form-group {{$errors-> has('Load') ? 'has-error' : ''}}" >--}}
+                    <div class="form-group {{$errors-> has('Load') ? 'has-error' : ''}}" >
                         {{--@if (!empty($resume->all()))--}}
                             {{--<select class="form-control" id="resume" name="resumeId" style="margin-top: 10px">--}}
                                 {{--@foreach($resume as $res)--}}
@@ -123,12 +123,9 @@
                         {{--<p>У вас немає резюме.Перейти до створення резюме</p>--}}
                         {{--<p>{!!link_to_route('resume.create','Створення резюме')!!}</p>--}}
                     {{--@endif--}}
-                    {{--<div class="modal-footer">--}}
-                        {{--@if (!empty($resume->all()))--}}
-                            {{--<input type="submit" class="btn btn-default" name="btn" onclick="PasteLink()" style="background: #f48952" value="Відправити резюме">--}}
-                        {{--@endif--}}
-                        {{--<button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>--}}
-                    {{--</div>--}}
+                    <div align="right">
+                        {!!Form::submit('Відправити', ['class' => 'btn btn-warning btn-send'])!!}
+                    </div>
                     {!!Form::close()!!}
                 </div>
 
