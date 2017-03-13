@@ -91,7 +91,7 @@
                 <div id="send-URL-vacancy">
                     {!!Form::model(array('route' => 'vacancy.show', 'method' => 'post'))!!}
                     {!!Form::label('url', 'Вставити посилання на URL:',['class' => 'url-text-vac'] )!!}
-                    {!!Form::text('email',null,['class' => 'form-control url-input-vac'])!!}
+                    {!!Form::text('Link',null,array('class' => 'form-control url-input-vac', 'autocomplete'=>"off",'required','id'=>'Link'))!!}
                     <div align="right">
                         {!!Form::submit('Відправити', ['class' => 'btn btn-warning btn-send'])!!}
                     </div>

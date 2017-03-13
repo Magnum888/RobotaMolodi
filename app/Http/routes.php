@@ -52,7 +52,9 @@ Route::any('searchCompanies',['as' => 'searchCompany' ,'uses' => 'SearchControll
 Route::post('vacancyAnswer','Vacancy\VacancyController@sendFile');
 $router->resource('vacancy','Vacancy\VacancyController');
 Route::get('vacancy/show', 'VacancyController@create');
-Route::post('vacancy/show', 'VacancyController@store');
+Route::post('vacancy/show', 'VacancyController@link');
+Route::post('vacancy/show', 'VacancyController@sendResume');
+Route::post('vacancy/show', 'VacancyController@sendFile');
 
 Route::get('vacancy/{vacancy}/response',['as'=>'vacancy.response', 'uses' => 'Vacancy\VacancyController@response']);
 
