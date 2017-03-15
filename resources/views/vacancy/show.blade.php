@@ -89,9 +89,9 @@
                 </div>
 
                 <div id="send-URL-vacancy">
-                    {!!Form::model(array('route' => 'vacancy.show', 'method' => 'post'))!!}
+                    {!!Form::model(array('route' => 'FormVa', 'method' => 'post'))!!}
                     {!!Form::label('url', 'Вставити посилання на URL:',['class' => 'url-text-vac'] )!!}
-                    {!!Form::text('Link',null,array('class' => 'form-control url-input-vac', 'autocomplete'=>"off",'required','id'=>'Link'))!!}
+                    {!!Form::text('Link',null,array('class' => 'form-control url-input-vac','placeholder' =>'URL:','autocomplete'=>"off",'required','id'=>'Link'))!!}
                     <div align="right">
                         {!!Form::submit('Відправити', ['class' => 'btn btn-warning btn-send'])!!}
                     </div>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div id="send-file-vacancy">
-                    {!!Form::model(array(['route' => 'vacancy.show','enctype' => 'multipart/form-data', 'files' => true]))!!}
+                    {!!Form::model(array(['route' => 'vacancy.show','method'=>"post", 'enctype' => 'multipart/form-data', 'files' => true]))!!}
                     {!! Form::file('file',array('class' => 'open-file-vac', 'id'=>'File', 'name' => 'FileName')) !!}
                     <div align="right">
                         {!!Form::submit('Відправити', ['class' => 'btn btn-warning btn-send'])!!}

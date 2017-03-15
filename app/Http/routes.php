@@ -39,7 +39,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('nata', function(){return 'Get well, Nataly!';});
 
 //////Search Route//////////////
 Route::any('searchVacancies',['as' => 'searchVacancy' ,'uses' => 'SearchController@showVacancies']);
@@ -51,10 +50,12 @@ Route::any('searchCompanies',['as' => 'searchCompany' ,'uses' => 'SearchControll
 //Vacancy Route
 Route::post('vacancyAnswer','Vacancy\VacancyController@sendFile');
 $router->resource('vacancy','Vacancy\VacancyController');
-Route::get('vacancy/show', 'VacancyController@create');
-Route::post('vacancy/show', 'VacancyController@link');
-Route::post('vacancy/show', 'VacancyController@sendResume');
-Route::post('vacancy/show', 'VacancyController@sendFile');
+//Route::get('vacancy/show', 'VacancyController@create');
+//Route::post('vacancy/show', 'VacancyController@link');
+//Route::post('vacancy/show', 'VacancyController@sendResume');
+//Route::post('vacancy/show', 'VacancyController@sendFile');
+//$router->resource('vacancy','Vacancy\FormVacancyController');
+//Route::match(['get', 'post'],'vacancy/show',['uses' => 'FormVacancyController@show']);
 
 Route::get('vacancy/{vacancy}/response',['as'=>'vacancy.response', 'uses' => 'Vacancy\VacancyController@response']);
 
@@ -136,4 +137,3 @@ Route::get('filter_companies',['as'=>'filter.companies','uses'=>'FilterControlle
 Route::get('ajax_vacancies',['as'=>'ajax.vacancies','uses'=>'Vacancy/VacancyController@showVacancies']);
 //Route::resource('filter_vacancies', 'Vacancy/VacancyController@showVacancies');
 
-//Route::form vacancy
